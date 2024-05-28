@@ -1,0 +1,73 @@
+.navbar {
+  padding: 10px 20px;
+}
+.menu__btn,
+.btn-primary {
+  background-color: transparent !important;
+  color: grey !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent !important;
+}
+.menu__btn:hover,
+.menu__btn:active,
+.menu__btn:focus-visible {
+  background-color: transparent !important;
+  border: 1px solid grey !important;
+  color: grey !important;
+}
+.nav__link {
+  color: grey;
+}
+.disabled {
+  color: lightgray !important;
+}
+.nav__link:hover {
+  color: #030303;
+}
+.dropdown-toggle {
+  font-size: 16px !important;
+  color: grey m !important;
+}
+.dropdown__menu {
+  position: relative !important;
+  inset: 0px !important;
+  transform: none !important;
+  margin: 0 1em;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.form__small__screen {
+  display: flex;
+  align-items: center;
+  margin: 0 1em 1em;
+}
+
+form .btn-primary {
+  padding: 5px 10px !important;
+  color: green !important;
+  background-color: transparent !important;
+  border: 1px solid green !important;
+  font-size: 16px !important;
+}
+form .btn-primary:hover {
+  background-color: green !important;
+  color: white !important;
+}
+.jumbo__bg {
+  background: url("./assets/jumbotron.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
