@@ -70,4 +70,79 @@ form .btn-primary:hover {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.overlay {
+  background-color: grey;
+  width: 100%;
+  padding: 2em 0;
+}
+.about__container {
+  padding: 4em 1em;
+}
+.about__container h2 {
+  color: grey;
+  font-style: italic;
+  text-align: left;
+  font-weight: normal;
+}
+.about__container p {
+  font-size: 18px;
+  color: grey;
+  font-style: italic;
+  text-align: right;
+}
+.about__container p span {
+  font-size: 18px;
+  color: grey;
+  font-weight: bold;
+  font-style: italic;
+  text-align: right;
+}
+
+.features__container h1 {
+  color: grey;
+  margin: 1.5em;
+  text-align: center;
+}
+.features__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2em 0;
+  /* flex-wrap: wrap; */
+}
+.features__content .card {
+  padding: 1em;
+}
+.card-subtitle {
+  color: grey;
+  text-align: left;
+  font-weight: normal;
+}
+.testimonials__container {
+  background-color: grey;
+  padding: 4em 0;
+}
+.testimonials__container h1 {
+  color: white;
+  text-align: center;
+}
+.testimonials__content {
+  max-width: 600px;
+}
+@media (max-width: 767px) {
+  .features__content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .features__content .card {
+    width: 100%;
+  }
+
+  .card-subtitle {
+    color: grey;
+    text-align: center;
+    font-weight: normal;
+  }
 }

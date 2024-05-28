@@ -1,120 +1,18 @@
-// src/Navbar.js
-import { useState } from "react";
-import {
-  Navbar,
-  Nav,
-  Button,
-  Collapse,
-  Container,
-  Dropdown,
-} from "react-bootstrap";
-import logo from "./assets/logo.png";
-import { FiMenu } from "react-icons/fi";
+import { Card, Container } from "react-bootstrap";
+import NavbarComponent from "./components/NavbarComponent";
+import funImg from "./assets/fun.png";
+import experienceImg from "./assets/experienced.png";
+import smartImg from "./assets/smart.png";
+import CarouselComponent from "./components/CarouselComponent";
 
 function App() {
-  const [open, setOpen] = useState(false);
-
   return (
     <>
-      <Navbar expand="lg" className="navbar">
-        <Navbar.Brand
-          href="#home"
-          className="d-flex align-center justify-center"
-        >
-          <img src={logo} alt="logo" />
-        </Navbar.Brand>
-        <Button
-          aria-controls="basic-navbar-nav"
-          aria-expanded={open}
-          onClick={() => setOpen(!open)}
-          className="d-lg-none"
-        >
-          <FiMenu />
-        </Button>
-        <Navbar.Collapse
-          id="basic-navbar-nav"
-          className="d-none d-lg-flex large__screen__nav"
-        >
-          <Nav className="me-auto">
-            <Nav.Link className="nav__link" href="#home">
-              Home
-            </Nav.Link>
-            <Nav.Link className="nav__link" href="#link">
-              Link
-            </Nav.Link>
-            <Dropdown>
-              <Dropdown.Toggle>dropdown</Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Nav.Link
-              aria-disabled
-              disabled
-              className="nav__link disabled"
-              href="#contact"
-            >
-              Disable
-            </Nav.Link>
-          </Nav>
-          <form>
-            <input type="text" className="form-control" placeholder="Search" />
-            <Button type="submit" className="btn btn-primary">
-              Submit
-            </Button>
-          </form>
-        </Navbar.Collapse>
-      </Navbar>
-      <Collapse in={open} className="d-lg-none">
-        <div id="basic-navbar-nav">
-          <Nav
-            className="me-auto"
-            style={{ display: "flex", flexDirection: "column" }}
-          >
-            <Nav.Link className="nav__link" href="#home">
-              Home
-            </Nav.Link>
-            <Nav.Link className="nav__link" href="#link">
-              Link
-            </Nav.Link>
-            <Dropdown>
-              <Dropdown.Toggle>dropdown</Dropdown.Toggle>
-              <Dropdown.Menu className="dropdown__menu">
-                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                <Dropdown />
-                <Dropdown.Item href="#/action-4">Separated link</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Nav.Link
-              aria-disabled
-              disabled
-              className="nav__link disabled"
-              href="#contact"
-            >
-              Disable
-            </Nav.Link>
-            <Nav.Link className="nav__link" href="#contact">
-              Search
-            </Nav.Link>
-          </Nav>
-          <form className="form__small__screen">
-            <input type="text" className="form-control" placeholder="Search" />
-            <Button type="submit" className="btn btn-primary">
-              Submit
-            </Button>
-          </form>
-        </div>
-      </Collapse>
+      <NavbarComponent />
       <Container fluid className="jumbo__bg">
         <div className="overlay">
           <Container className="text-center banner-text">
-            <h1>Welcome to My Website</h1>
+            <h1>Administration made easy.</h1>
             <p>
               This is a simple hero unit, a simple Container-style component for
               calling extra attention to featured content or information.
@@ -122,6 +20,48 @@ function App() {
           </Container>
         </div>
       </Container>
+      <Container className="about__container">
+        <h2>
+          Thanks to Adhoc we now have beautiful and faithful service every day.
+          Our customers are happy and engagement has drastically increased.
+          Highly recommend!
+        </h2>
+        <p>
+          {" "}
+          <span>-Dave Ellavar</span>, Academy of Code
+        </p>
+      </Container>
+      <Container className="features__container">
+        <h1>Why Adhoc?</h1>
+        <Container className="features__content">
+          <Card style={{ width: 300, border: "none" }}>
+            <Card.Img src={experienceImg} />
+            <Card.Body>
+              <Card.Subtitle>
+                Experience Lorem ipsum dolor sit amet.
+              </Card.Subtitle>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: 300, border: "none" }}>
+            <Card.Img src={funImg} />
+            <Card.Body>
+              <Card.Subtitle>Fun Lorem ipsum dolor sit amet.</Card.Subtitle>
+            </Card.Body>
+          </Card>
+          <Card style={{ width: 300, border: "none" }}>
+            <Card.Img src={smartImg} />
+            <Card.Body>
+              <Card.Subtitle>Smart Lorem ipsum dolor sit amet.</Card.Subtitle>
+            </Card.Body>
+          </Card>
+        </Container>
+      </Container>
+      <div className="testimonials__container">
+        <Container className="testimonials__content">
+          <h1>Meet the team</h1>
+          <CarouselComponent />
+        </Container>
+      </div>
     </>
   );
 }
